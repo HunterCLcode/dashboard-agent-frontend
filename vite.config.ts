@@ -13,6 +13,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  optimizeDeps: {
+    include: ['react-simple-maps', 'prop-types'],
+  },
   server: {
     proxy: {
       '/query':  'http://localhost:8000',
